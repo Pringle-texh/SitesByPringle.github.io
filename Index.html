@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Attractive Homepage</title>
+<style>
+  /* Reset some default styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f0f4f8;
+    color: #333;
+  }
+  header {
+    background: #4a90e2;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header .logo {
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+  }
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+  nav ul li a:hover {
+    color: #d1e7ff;
+  }
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 40px;
+    background: white;
+    border-radius: 10px;
+    margin: 40px auto;
+    max-width: 1200px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  }
+  .hero-text {
+    max-width: 600px;
+  }
+  .hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #222;
+  }
+  .hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #555;
+    line-height: 1.6;
+  }
+  .hero-text button {
+    background: #4a90e2;
+    border: none;
+    padding: 15px 30px;
+    color: white;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  .hero-text button:hover {
+    background: #357abd;
+  }
+  .hero-image img {
+    max-width: 400px;
+    border-radius: 10px;
+  }
+  @media(max-width: 900px) {
+    .hero {
+      flex-direction: column;
+      text-align: center;
+    }
+    .hero-image {
+      margin-top: 30px;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">SitesByPringle</div>
+  <nav>
+    <ul>
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="Services.html">Services</a></li>
+      <li><a href="About.html">About</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-text">
+    <h1>Welcome to SitesByPringle</h1>
+    <p>Your perfect solution for modern web design. Simple, clean, and effective.</p>
+    <button><a href="consulting.html"><font color="red">Get Started</font></a></button>
+  </div>
+  <div class="hero-image">
+    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=400&q=80" alt="Hero Image" />
+  </div>
+</section>
+
+</body>
+</html>
+
+

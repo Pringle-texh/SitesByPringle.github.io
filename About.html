@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About - SiteByPringle</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <style>
+    body {
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: white;
+    }
+    .glass {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .floating-device {
+      animation: float 6s ease-in-out infinite;
+    }
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Hero Section -->
+<section class="relative h-[60vh] flex flex-col justify-center items-center text-center">
+  <h1 class="text-5xl sm:text-6xl font-extrabold bg-gradient-to-r from-cyan-400 to-fuchsia-500 bg-clip-text text-transparent animate-pulse">
+    About <span class="text-white">Me</span>
+  </h1>
+  <p class="text-xl mt-4 text-gray-300 max-w-xl">
+    Bringing your vision to the web world — with power, precision, and personality.
+  </p>
+</section>
+
+<!-- Floating Device Icons -->
+<div class="absolute top-10 left-10 opacity-10 floating-device">
+  <img src="https://cdn-icons-png.flaticon.com/512/2920/2920258.png" width="60" />
+</div>
+<div class="absolute bottom-10 right-10 opacity-10 floating-device">
+  <img src="https://cdn-icons-png.flaticon.com/512/2942/2942909.png" width="70" />
+</div>
+
+<!-- Features -->
+<section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 grid md:grid-cols-3 gap-10">
+  <!-- Card 1 -->
+  <div class="glass p-6 rounded-xl shadow-lg border border-cyan-500 hover:scale-105 transition" data-aos="fade-up">
+    <div class="text-4xl mb-4">⚡</div>
+    <h3 class="text-xl font-bold text-cyan-400 mb-2">Fast</h3>
+    <p class="text-gray-200">Ultra-responsive sites, optimized for performance and speed.</p>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="glass p-6 rounded-xl shadow-lg border border-pink-500 hover:scale-105 transition" data-aos="fade-up" data-aos-delay="100">
+    <div class="text-4xl mb-4">🧠</div>
+    <h3 class="text-xl font-bold text-pink-400 mb-2">Smart</h3>
+    <p class="text-gray-200">Strategic and user-focused solutions tailored to your brand.</p>
+  </div>
+
+  <!-- Card 3 -->
+  <div class="glass p-6 rounded-xl shadow-lg border border-green-500 hover:scale-105 transition" data-aos="fade-up" data-aos-delay="200">
+    <div class="text-4xl mb-4">🔧</div>
+    <h3 class="text-xl font-bold text-green-400 mb-2">Flexible</h3>
+    <p class="text-gray-200">Built to scale, adapt, and evolve with your goals.</p>
+  </div>
+</section>
+
+<!-- AOS Animation Script -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
+</body>
+</html>

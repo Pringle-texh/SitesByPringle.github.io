@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .fade-up {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease-out;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .float {
+      animation: float 6s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-15px);
+      }
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+  <section class="max-w-6xl mx-auto p-6">
+    <h2 class="text-4xl font-bold text-center mb-10">Our Services</h2>
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      
+      <!-- Service Card -->
+      <a href="consulting.html" class="fade-up block bg-white rounded-2xl shadow-md hover:shadow-xl hover:scale-[1.02] transition-all duration-300 p-6 text-center">
+        <div class="text-indigo-600 text-5xl mb-4">💼</div>
+        <h3 class="text-xl font-semibold mb-2">Consulting</h3>
+        <p class="text-gray-600">Expert business strategies tailored to your goals and market trends.</p>
+      </a>
+      <a href="development.html" class="fade-up block bg-white rounded-2xl shadow-md hover:shadow-xl hover:scale-[1.02] transition-all duration-300 p-6 text-center">
+        <div class="text-green-500 text-5xl mb-4">🛠️</div>
+        <h3 class="text-xl font-semibold mb-2">Development</h3>
+        <p class="text-gray-600">Full-stack web and app development with the latest technologies.</p>
+      </a>
+      <a href="design.html" class="fade-up block bg-white rounded-2xl shadow-md hover:shadow-xl hover:scale-[1.02] transition-all duration-300 p-6 text-center">
+        <div class="text-blue-500 text-5xl mb-4">🎨</div>
+        <h3 class="text-xl font-semibold mb-2">Design</h3>
+        <p class="text-gray-600">Modern, user-centered designs that reflect your brand identity.</p>
+      </a>
+    </div>
+  </section>
+
+ <!-- Animated Devices Section -->
+<section class="my-20 flex flex-wrap justify-center gap-10 px-6">
+  <!-- Laptop -->
+  <div class="float w-48 md:w-64">
+    <img src="Laptop2.png" alt="Laptop" class="w-full h-auto" />
+  </div>
+
+
+  <!-- Smartphone -->
+  <div class="float w-36 md:w-48">
+    <img src="Laptop3.png" alt="Smartphone" class="w-full h-auto" />
+  </div>
+
+  <!-- Desktop Monitor -->
+  <div class="float w-48 md:w-64">
+    <img src="Laptop.png" alt="Desktop" class="w-full h-auto" />
+  </div>
+
+  <!-- Gear/Code Icon -->
+  <div class="float w-36 md:w-48">
+    <img src="Tablet.png" alt="Coding Gear" class="w-full h-auto" />
+  </div>
+</section>
+
+
+  <!-- Why Choose Me -->
+  <section class="max-w-4xl mx-auto mt-8 p-6 text-center fade-up">
+    <h2 class="text-3xl font-bold mb-4">Why Choose Me?</h2>
+    <p class="text-gray-700 text-lg">
+      I'm not just a developer — I'm a <strong>problem solver</strong>, a <strong>design thinker</strong>, and a <strong>technology partner</strong> who’s passionate about building clean, performant, and future-ready digital experiences. With a deep understanding of both frontend and backend systems, I turn complex ideas into elegant solutions. When you work with me, you're getting dedication, quality, and innovation — every single time.
+    </p>
+  </section>
+
+  <script>
+    // Fade-in animation observer
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    });
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
+
